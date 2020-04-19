@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="main.css">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Ngram Generator</h1>
+        <div>
+            <input type="checkbox" id="includeBigrams" name="scales" checked>
+            <label for="bigrams">Include Bigrams</label>
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Paste in your text:</label>
+            <textarea id="textArea" class="form-control rounded-0" id="exampleFormControlTextarea1" rows="5"></textarea>
+        </div>
+        <button id="generate">Generate</button>
+        <button id="scrollToBottom" style="display: none">Scroll to bottom</button>
+
+        <div id="table-results" class="pt-3">
+            <table pt-3 class="table" id="resultsTable">
+            </table>
+            <div id="botton"></div>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <span class="text-muted">Ngram Generator - Made in Colorado</span>
+        </div>
+    </footer>
+
+
+</body>
+<script src="main.js"></script>
+
+</html>
