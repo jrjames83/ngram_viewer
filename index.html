@@ -6,11 +6,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link href="http://fonts.googleapis.com/css?family=Corben:bold" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Nobile" rel="stylesheet" type="text/css">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="main.css">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/universal-sentence-encoder"></script> -->
 
     <title>Hello, world!</title>
 </head>
@@ -18,17 +23,41 @@
 <body>
 
     <div class="container">
-        <h1>Ngram Generator</h1>
-        <div>
-            <input type="checkbox" id="includeBigrams" name="scales" checked>
-            <label for="bigrams">Include Bigrams</label>
+        <div class="mb-4 mt-5">
+            <h1>Ngram Generator</h1>
         </div>
 
         <div class="form-group">
             <label for="exampleFormControlTextarea1">Paste in your text:</label>
             <textarea id="textArea" class="form-control rounded-0" id="exampleFormControlTextarea1" rows="5"></textarea>
         </div>
-        <button id="generate">Generate</button>
+        <div class="row">
+            <div class="col-md-1">
+                <input type="checkbox" id="includeBigrams" name="scales" checked>
+            </div>
+            <div class="col-md-3">
+                <label for="bigrams">Include Bigrams</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="bigrams">Min Word Length: </label>
+                <input type="text" name="" id="minWordLength" placeholder="5">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="bigrams">Min Word Frequency </label>
+                <input type="text" name="" id="minWordFreq" placeholder="5">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="bigrams">Max Word Frequency </label>
+                <input type="text" name="" id="maxWordFreq" placeholder="100">
+            </div>
+        </div>
+        <button id="generate" class="mt-2">Generate</button>
         <button id="scrollToBottom" style="display: none">Scroll to bottom</button>
 
         <div id="table-results" class="pt-3">
@@ -41,12 +70,15 @@
 
     <footer class="footer">
         <div class="container">
-            <span class="text-muted">Ngram Generator - Made in Colorado</span>
+            <span class="text-muted">Ngram Generator - Made in Colorado <img id="footerImage"
+                    src="iconfinder_Colorado-Flag_70674.png" alt=""></span>
         </div>
     </footer>
 
 
 </body>
+
+<script src="stopwords.js"></script>
 <script src="main.js"></script>
 
 </html>
