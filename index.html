@@ -14,8 +14,8 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="main.css">
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/universal-sentence-encoder"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/universal-sentence-encoder"></script>
 
     <title>Ngram Generator - Get Unigran and Bigram Frequency From Text</title>
 </head>
@@ -28,7 +28,7 @@
         </div>
 
         <div class="form-group">
-            <label for="exampleFormControlTextarea1">Paste in your text:</label>
+            <label for="exampleFormControlTextarea1">Paste in your text (we'll remove English stopwords):</label>
             <textarea id="textArea" class="form-control rounded-0" id="exampleFormControlTextarea1" rows="5"></textarea>
         </div>
         <div class="row">
@@ -36,9 +36,21 @@
                 <input type="checkbox" id="includeBigrams" name="scales" checked>
             </div>
             <div class="col-md-3">
-                <label for="bigrams">Include Bigrams</label>
+                <label for="bigrams">Include Bigrams (2 words)</label>
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-md-1">
+                <input type="checkbox" id="includeTrigrams" name="scales" checked>
+            </div>
+            <div class="col-md-3">
+                <label for="trigrams">Include Trigrams (3 words)</label>
+            </div>
+        </div>
+
+
+
         <div class="row">
             <div class="col">
                 <label for="bigrams">Min Word Length: </label>
